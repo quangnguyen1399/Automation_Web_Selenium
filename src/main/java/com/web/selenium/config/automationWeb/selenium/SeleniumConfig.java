@@ -1,5 +1,7 @@
 package com.web.selenium.config.automationWeb.selenium;
 
+import com.web.selenium.config.automationWeb.config.GlobalConfigBuilder;
+import com.web.selenium.config.automationWeb.driver.SessionManager;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeOptions;
@@ -7,7 +9,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 
 public class SeleniumConfig {
     public boolean isHealess() {
-        return Boolean.valueOf(System.getProperty("isHeadLess", "false"));
+        return Boolean.valueOf(SessionManager.getSession().getGlobalConfig().get("isHeadless"));
     }
     public ChromeOptions getChromeOptions() {
         ChromeOptions options = new ChromeOptions();

@@ -1,4 +1,4 @@
-package com.web.selenium.config.automationWeb.config;
+package com.web.selenium.config.automationWeb.constants;
 
 public class GlobalConstants {
 

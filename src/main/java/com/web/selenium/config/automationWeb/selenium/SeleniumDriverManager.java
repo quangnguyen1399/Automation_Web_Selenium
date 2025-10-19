@@ -1,11 +1,10 @@
 package com.web.selenium.config.automationWeb.selenium;
 
-import com.web.selenium.config.automationWeb.driver.SeleniumDriver;
+import com.web.selenium.config.automationWeb.api.driver.DriverManager;
 import com.web.selenium.config.automationWeb.driver.SeleniumDriverInterface;
 import com.web.selenium.config.automationWeb.driver.SessionManager;
 import com.web.selenium.config.automationWeb.enums.Browsers;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -16,7 +15,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-import static com.web.selenium.config.automationWeb.config.GlobalConstants.DRIVER_DOWNLOADED;
+import static com.web.selenium.config.automationWeb.constants.GlobalConstants.DRIVER_DOWNLOADED;
 
 public class SeleniumDriverManager {
 
@@ -63,7 +62,7 @@ public class SeleniumDriverManager {
     private static WebDriver initLocalWebDriver() {
         try {
             SeleniumConfig sc = new SeleniumConfig();
-            Browsers browser = Browsers.valueOf(System.getProperty("browser", "CHROME").toUpperCase());
+            Browsers browser = Browsers.valueOf(DriverManager.getGlobalConfig().get("browserName").toUpperCase());
             WebDriver driver = switch (browser) {
                 case CHROME  -> new ChromeDriver(sc.getChromeOptions());
                 case FIREFOX -> new FirefoxDriver(sc.getFirefoxOptions());

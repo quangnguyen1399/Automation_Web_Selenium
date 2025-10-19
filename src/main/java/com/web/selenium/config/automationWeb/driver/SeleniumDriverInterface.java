@@ -1,20 +1,20 @@
 package com.web.selenium.config.automationWeb.driver;
 
+import com.web.selenium.config.automationWeb.config.GlobalConfig;
 import org.openqa.selenium.WebDriver;
 
 public interface SeleniumDriverInterface {
 
-//    void setGlobalConfig(GlobalConfig obj);
-//
-//    GlobalConfig getGlobalConfig();
-//
+    void setDriver(WebDriver webDriver);
+
+    WebDriver getDriver();
+
 //    void setDataMapper(DataMapper obj);
 //
 //    DataMapper getDataMapper();
 
-    void setDriver(WebDriver obj);
-
-    WebDriver getDriver();
+    void setGlobalConfig(GlobalConfig globalConfig);
+    GlobalConfig getGlobalConfig();
 
 
 }

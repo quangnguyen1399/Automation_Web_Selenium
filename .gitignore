@@ -3,7 +3,8 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 drivers/
-*drivers/
+
+
 
 ### IntelliJ IDEA ###
 .idea/modules.xml

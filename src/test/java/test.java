@@ -1,4 +1,6 @@
 import com.web.selenium.config.automationWeb.api.driver.DriverManager;
+import com.web.selenium.config.automationWeb.config.GlobalConfig;
+import com.web.selenium.config.automationWeb.config.GlobalConfigBuilder;
 import com.web.selenium.config.automationWeb.driver.SeleniumDriver;
 import com.web.selenium.config.automationWeb.driver.SessionManager;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +11,8 @@ import org.testng.annotations.Test;
 public class test {
     @BeforeMethod(alwaysRun = true)
     public void setUp() {
-        SessionManager.setSesson(new SeleniumDriver());
+        DriverManager.startSession();
+        DriverManager.setGlobalConfig(GlobalConfigBuilder.getInstance().getConfig());
         DriverManager.startDriver();
     }
 
@@ -21,7 +24,7 @@ public class test {
 
     @Test
     public void openHome() {
-        DriverManager.getSeleniumDriver().navigate().to("https://www.google.com");
+        DriverManager.getDriver().navigate().to("https://www.google.com");
 
         try {
             Thread.sleep(10000);
