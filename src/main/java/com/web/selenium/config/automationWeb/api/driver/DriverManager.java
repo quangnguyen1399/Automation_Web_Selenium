@@ -1,5 +1,6 @@
 package com.web.selenium.config.automationWeb.api.driver;
 
+
 import com.web.selenium.config.automationWeb.config.GlobalConfig;
 import com.web.selenium.config.automationWeb.driver.SeleniumDriver;
 import com.web.selenium.config.automationWeb.driver.SessionManager;
@@ -12,6 +13,7 @@ public class DriverManager {
         //SeleniumDriverManager.launchGridLocal();
         SeleniumDriverManager.startWebDriver();
     }
+
     public static void quit(){
         SessionManager.getSession().getDriver().quit();
     }

@@ -3,8 +3,12 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 drivers/
+<<<<<<< HEAD
 
 
+=======
+*drivers/
+>>>>>>> 3e00d0b (init webDriver)
 
 ### IntelliJ IDEA ###
 .idea/modules.xml

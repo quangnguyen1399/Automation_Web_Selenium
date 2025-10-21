@@ -1,5 +1,6 @@
 package com.web.selenium.config.automationWeb.driver;
 
+
 import com.web.selenium.config.automationWeb.config.GlobalConfig;
 import org.openqa.selenium.WebDriver;
 
