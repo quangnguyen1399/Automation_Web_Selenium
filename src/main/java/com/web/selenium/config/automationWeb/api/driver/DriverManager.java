@@ -9,7 +9,6 @@ import org.openqa.selenium.WebDriver;
 public class DriverManager {
 
     public static void startDriver(){
-        //SeleniumDriverManager.launchGridLocal();
         SeleniumDriverManager.startWebDriver();
     }
 
@@ -22,9 +21,7 @@ public class DriverManager {
     }
 
     public static WebDriver getDriver(){
-        WebDriver driver= SessionManager.getSession().getDriver();
-
-        return driver;
+        return SessionManager.getSession().getDriver();
     }
 
     public static void startSession(){
