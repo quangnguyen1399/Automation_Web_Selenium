@@ -2,6 +2,10 @@ package com.web.selenium.config.automationWeb.selenium;
 
 import com.web.selenium.config.automationWeb.config.GlobalConfigBuilder;
 import com.web.selenium.config.automationWeb.driver.SessionManager;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 134eef8 ([dev]: add GlobalConfig properties file)
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeOptions;
