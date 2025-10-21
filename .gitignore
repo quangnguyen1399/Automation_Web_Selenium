@@ -4,11 +4,16 @@ target/
 !**/src/test/**/target/
 drivers/
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 *drivers/
 >>>>>>> 3e00d0b (init webDriver)
+=======
+
+
+>>>>>>> 134eef8 ([dev]: add GlobalConfig properties file)
 
 ### IntelliJ IDEA ###
 .idea/modules.xml

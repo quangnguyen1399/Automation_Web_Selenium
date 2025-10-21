@@ -1,6 +1,5 @@
 package com.web.selenium.config.automationWeb.api.driver;
 
-
 import com.web.selenium.config.automationWeb.config.GlobalConfig;
 import com.web.selenium.config.automationWeb.driver.SeleniumDriver;
 import com.web.selenium.config.automationWeb.driver.SessionManager;
