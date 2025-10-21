@@ -1,9 +1,6 @@
 package com.web.selenium.config.automationWeb.driver;
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 134eef8 ([dev]: add GlobalConfig properties file)
 import com.web.selenium.config.automationWeb.config.GlobalConfig;
 import org.openqa.selenium.WebDriver;
 
