@@ -37,7 +37,8 @@ public class test {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        DriverManager.quit();
+        //DriverManager.quit();
+        System.out.println("test 0");
     }
 
     @Test
@@ -51,7 +52,8 @@ public class test {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        DriverManager.quit();
+        //DriverManager.quit();
+        System.out.println("test 1");
     }
 
 }

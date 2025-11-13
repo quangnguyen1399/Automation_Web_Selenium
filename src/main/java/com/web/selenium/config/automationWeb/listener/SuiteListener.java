@@ -13,10 +13,12 @@ public class SuiteListener implements ISuiteListener {
     public void onStart(ISuite iSuite) {
         SessionManager.setSession(new SeleniumDriver());
         SessionManager.getSession().setGlobalConfig(GlobalConfigBuilder.getInstance(iSuite).getConfig());
+        System.out.println("onStart suite");
     }
 
     @Override
     public void onFinish(ISuite iSuite) {
-
+        //DriverManager.quit();
+        System.out.println("onFinish suite");
     }
 }
