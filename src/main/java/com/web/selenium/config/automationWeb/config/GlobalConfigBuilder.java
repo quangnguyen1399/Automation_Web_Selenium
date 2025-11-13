@@ -5,6 +5,8 @@ import com.web.selenium.config.automationWeb.driver.SeleniumDriver;
 import com.web.selenium.config.automationWeb.driver.SeleniumDriverInterface;
 import com.web.selenium.config.automationWeb.utils.PropertiesFileReader;
 import org.openqa.selenium.WebDriver;
+import org.testng.ISuite;
+import org.testng.ISuiteListener;
 
 import java.util.Properties;
 
@@ -35,8 +37,9 @@ public class GlobalConfigBuilder extends SeleniumDriver {
         return configBuilder;
     }
 
-    public static GlobalConfigBuilder getInstance() {
-        return getInstance("Chrome-local-config.properties");
+    public static GlobalConfigBuilder getInstance(ISuite iSuite) {
+        String path = iSuite.getParameter("config");
+        return getInstance(path);
     }
 
     public GlobalConfig getConfig() {

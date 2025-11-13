@@ -12,30 +12,46 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class test {
-    @BeforeMethod(alwaysRun = true)
-    public void setUp() {
-        DriverManager.startSession();
-        DriverManager.setGlobalConfig(GlobalConfigBuilder.getInstance().getConfig());
-        TestData test = new DataMapper("C:\\quang\\Automation_Web_Selenium\\src\\test\\test.json").getTestData();
-        SessionManager.getSession().setTestData(test);
-        DriverManager.startDriver();
-    }
+//    @BeforeMethod(alwaysRun = true)
+//    public void setUp() {
+//        DriverManager.startSession();
+//        DriverManager.setGlobalConfig(GlobalConfigBuilder.getInstance("Chrome-local-config.properties").getConfig());
+//        TestData test = new DataMapper("C:\\quang\\Automation_Web_Selenium\\src\\test\\test.json").getTestData();
+//        //SessionManager.getSession().setTestData(test);
+//        DriverManager.startDriver();
+//    }
 
-    @AfterMethod(alwaysRun = true)
-    public void tearDown() {
+//    @AfterMethod(alwaysRun = true)
+//    public void tearDown() {
+//        DriverManager.quit();
+//    }
+
+    @Test
+    @InjectData(JsonPath = "")
+    public void openHome() {
+        //DriverManager.startDriver();
+        DriverManager.getDriver().navigate().to("https://www.google.com");
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         DriverManager.quit();
     }
 
     @Test
     @InjectData(JsonPath = "")
-    public void openHome() {
-        DriverManager.getDriver().navigate().to("https://www.google.com");
+    public void openHome1() {
+        //DriverManager.startDriver();
+        DriverManager.getDriver().navigate().to("https://www.facebook.com/");
 
         try {
-            Thread.sleep(10000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+        DriverManager.quit();
     }
 
 }

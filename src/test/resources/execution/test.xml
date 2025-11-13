@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="testNG" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="com.web.selenium.config.automationWeb.listener.SuiteListener"></listener>
+        <listener class-name="com.web.selenium.config.automationWeb.listener.TestListener"></listener>
+
+    </listeners>
+    <parameter name="config" value="Chrome-local-config.properties"></parameter>
+
+    <test name="test">
+        <classes>
+            <class name="test">
+                <methods>
+                    <include name="openHome"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="test1">
+        <classes>
+            <class name="test">
+                <methods>
+                    <include name="openHome1"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>

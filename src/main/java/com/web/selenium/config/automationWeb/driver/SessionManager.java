@@ -12,8 +12,8 @@ public class SessionManager {
         return sessionService.get();
     }
 
-    public static void setSesson(SeleniumDriverInterface sesson){
-        sessionService.set(sesson);
+    public static void setSession(SeleniumDriverInterface session){
+        sessionService.set(session);
     }
 
     public static Boolean isDriverRunning() {

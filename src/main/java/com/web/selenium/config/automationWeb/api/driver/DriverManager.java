@@ -27,10 +27,10 @@ public class DriverManager {
     }
 
     public static void startSession(){
-        SessionManager.setSesson(new SeleniumDriver());
+        SessionManager.setSession(new SeleniumDriver());
     }
 
-    public  static void setGlobalConfig(GlobalConfig globalConfig){
+    public static void setGlobalConfig(GlobalConfig globalConfig){
         SessionManager.getSession().setGlobalConfig(globalConfig);
     }
     public static GlobalConfig getGlobalConfig(){
